@@ -51,3 +51,14 @@ load_all_questions.default <- function()
     all_questions <- NULL
   }
 }
+
+load_all_questions.null <- function()
+{
+  if(file.exists("questions.csv"))
+  {
+    all_questions <- read.csv(file = "questions.csv", header = TRUE)
+  }else
+  {
+    all_questions <- NULL
+  }
+}
