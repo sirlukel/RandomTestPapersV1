@@ -2,8 +2,11 @@
 
 export(answer_question)
 export(generate_test)
+export(load_all_questions)
+export(load_all_tests)
 export(mark_question)
 export(new_question)
 export(new_student)
 export(new_test)
+export(save_item)
 export(take_test)
