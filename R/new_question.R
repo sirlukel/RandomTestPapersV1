@@ -10,7 +10,6 @@
 #'@return A question type object
 #'@export
 
-
 new_question <- function(name = character(),option_num = integer(), correct_score = numeric(), wrong_loss = numeric(), partial_score = logical(), given_no_correct = logical(), correct = list()){
   #Updates score per correct answer if you are allowed partial marks
   if (partial_score == TRUE) {correct_score <- as.numeric(correct_score)/length(correct)}

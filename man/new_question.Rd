@@ -5,6 +5,7 @@
 \title{Creates a new object with class question}
 \usage{
 new_question(
+  name = character(),
   option_num = integer(),
   correct_score = numeric(),
   wrong_loss = numeric(),
