@@ -10,6 +10,8 @@ answer_question <- function(s = student(), q = question()){
   UseMethod("answer_question")
 }
 
+#'@export
+
 answer_question.default <- function(s = student(), q = question()){
   #If the student knows the number of correct options they will only select that many else they will select a random number of choices
   if(q$given_no_correct){
@@ -39,6 +41,8 @@ answer_question.default <- function(s = student(), q = question()){
 mark_question <- function(s = student(), q = question()){
   UseMethod("mark_question")
 }
+
+#'@export
 
 mark_question.default <- function(s = student(), q = question()){
   added_marks<-0

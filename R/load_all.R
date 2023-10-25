@@ -7,6 +7,7 @@ load_all_tests <-function(){
   UseMethod('load_all_tests')
 }
 
+#'@export
 load_all_tests.default <- function()
 {
   if(file.exists("tests.csv")){

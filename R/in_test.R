@@ -10,6 +10,8 @@ in_test <-function(x = character(),all_tests = list()){
   UseMethod('in_test')
 }
 
+#'@export
+
 in_test.default <-function(x = character(),all_tests = list()){
   t <- c()
   if(length(all_tests) == 0){

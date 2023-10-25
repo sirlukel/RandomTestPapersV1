@@ -10,6 +10,8 @@ delete <- function(x, removefrom){
   UseMethod('delete')
 }
 
+#'@export
+
 delete.character <- function(x = character(), removefrom){
   if(is.data.frame(removefrom)){
     for(i in x){

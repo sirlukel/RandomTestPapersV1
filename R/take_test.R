@@ -10,6 +10,8 @@ take_test <- function(s = student(), t = test()){
   UseMethod("take_test")
 }
 
+#'@export
+
 take_test.default<-function(s = student(), t = test()){
   #Gets the given student to answer each question in a test in turn
   for (i in t$questions)

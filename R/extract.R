@@ -11,6 +11,8 @@ extract_question <- function(name = character(), all_qs = data.frame())
   UseMethod("extract_question")
 }
 
+#'@export
+
 extract_question.default <- function(name = character(), all_qs = data.frame())
 {
   temp = all_qs[all_qs$name == name, ]
@@ -38,6 +40,8 @@ extract_question.default <- function(name = character(), all_qs = data.frame())
 extract_test <- function(name = character, all_ts = list(), all_qs = data.frame()){
   UseMethod('extract_test')
 }
+
+#'@export
 
 extract_test.default <- function(name = character(), all_ts = list(), all_qs = data.frame()){
   x<-NULL

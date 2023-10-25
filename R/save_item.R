@@ -12,6 +12,8 @@ save_item <- function(x){
 
 
 #Made for testing/development, should not be used by the user in its current state
+#'@export
+
 save_item.question <-function(x = question()){
   if(length(x) == 0)
   {
@@ -31,6 +33,8 @@ save_item.question <-function(x = question()){
   }
 }
 
+#'@export
+
 save_item.data.frame <- function(x){
 
   if(length(x) ==0)
@@ -47,6 +51,8 @@ save_item.data.frame <- function(x){
     write.table(x, file = 'questions.csv',append = FALSE, sep = ",", col.names = TRUE, row.names = FALSE)
   }
 }
+
+#'@export
 
 save_item.list <- function(x){
   if(length(x) == 0){
@@ -74,6 +80,8 @@ save_item.list <- function(x){
     write.table(x,file = 'tests.csv',append = FALSE, sep = ",", col.names = FALSE, row.names = FALSE)
   }
 }
+
+#'@export
 
 save_item.default <- function(x)
 {

@@ -51,6 +51,8 @@ add_to_all_test <- function( x= character(), addto){
   UseMethod('add_to_all_test')
 }
 
+#'@export
+
 add_to_all_test.default <- function( x= character(), addto){
   addto[[length(addto)+1]] <- x
   addto<-addto

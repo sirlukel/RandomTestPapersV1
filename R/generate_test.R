@@ -11,6 +11,8 @@ generate_test <- function(all_qs = data.frame(), qs = character(), can_neg = log
   UseMethod('generate_test')
 }
 
+#'@export
+
 generate_test.default <- function(all_qs = data.frame(), qs = character(), can_neg = logical()){
   x <- list()
   no <- c()

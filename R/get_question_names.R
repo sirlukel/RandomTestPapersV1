@@ -11,6 +11,8 @@ get_question_names <- function(t = test())
   UseMethod('get_question_names')
 }
 
+#'@export
+
 get_question_names.default <- function(t = test())
 {
   question_names <- c()
