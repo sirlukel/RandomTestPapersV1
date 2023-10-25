@@ -41,6 +41,8 @@ load_all_questions <-function()
   UseMethod('load_all_questions')
 }
 
+#'@export
+
 load_all_questions.default <- function()
 {
   if(file.exists("questions.csv"))
