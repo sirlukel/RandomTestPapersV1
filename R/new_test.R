@@ -6,8 +6,7 @@
 #'
 #' @return A new Test class object
 #' @export
-#'
-#' @examples
+
 new_test <- function(questions = list(), name = chr(), can_neg = logical()){
   max_marks <-0
   min_marks <-0

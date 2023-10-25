@@ -2,3 +2,4 @@
 
 export(new_question)
 export(new_student)
+export(new_test)
