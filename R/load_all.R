@@ -52,7 +52,7 @@ load_all_questions.default <- function()
   }
 }
 
-load_all_questions.null <- function()
+load_all_questions.NULL <- function()
 {
   if(file.exists("questions.csv"))
   {
