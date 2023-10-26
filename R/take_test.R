@@ -18,7 +18,7 @@ take_test.default<-function(s = student(), t = test()){
   {
     s <- answer_question(s = s, q = i)
   }
-  if (s$total_marks < 0 && t$can_neg == FALSE){
+  if (s$total_marks < 0 && t$min_marks == FALSE){
     s$total_marks <- 0
   }
   s <- s
