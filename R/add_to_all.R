@@ -11,7 +11,9 @@ add_to_all <- function(x, addto)
   UseMethod('add_to_all')
 }
 
-##This could be source of new questions being read as string
+#This could be source of new questions being read as string
+#'@export
+
 add_to_all.question <- function(x = question(), addto = data.frame())
 {
   nullcheck <-FALSE
@@ -53,7 +55,7 @@ add_to_all_test <- function( x= character(), addto){
 
 #'@export
 
-add_to_all_test.default <- function( x= character(), addto){
+add_to_all_test.default <- function(x= character(), addto){
   addto[[length(addto)+1]] <- x
   addto<-addto
 }
