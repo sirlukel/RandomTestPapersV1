@@ -12,7 +12,11 @@ new_test <- function(questions = list(), name = chr(), can_neg = logical()){
   min_marks <-0
   #Will calculate the maximum and minimum marks for a created test
   for (i in questions){
+    if(i$partial_score){
     max_marks <- max_marks + as.numeric(i$correct_score)*length(i$correct)
+    }else{
+      max_marks <- max_marks + as.numeric(i$correct_score)
+    }
     if (can_neg){
       min_marks <-min_marks + i$wrong_loss
     }
