@@ -1,13 +1,13 @@
 #' @export
 
-getPerCI <- function(marks = numeric(), percentage = integer, max_marks = numeric())
+getPerCI <- function(marks = numeric(), percentage = integer, max_mark = numeric())
 {
   UseMethod("getPerCI")
 }
 
 #'@export
 
-getPerCI.default <- function(marks = numeric(), percentage = integer, max_marks = numeric())
+getPerCI.default <- function(marks = numeric(), percentage = integer, max_mark = numeric())
 {
   per_mark <- percentage*max_mark/100
   count <- length(marks[marks>=per_mark])
