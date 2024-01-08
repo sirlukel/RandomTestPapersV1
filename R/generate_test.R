@@ -13,7 +13,7 @@ generate_test <- function(all_qs, qs, can_neg){
 
 #'@export
 
-generate_test.default <- function(all_qs, qs,){
+generate_test.default <- function(all_qs, qs, can_neg){
   x <- list()
   no <- c()
   for (i in 2:length(qs)){

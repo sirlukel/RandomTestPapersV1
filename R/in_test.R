@@ -12,7 +12,7 @@ in_test <-function(x, all_tests){
 
 #'@export
 
-in_test.default <-function(x=, all_tests){
+in_test.default <-function(x, all_tests){
   t <- c()
   if(length(all_tests) == 0){
     return(t)
