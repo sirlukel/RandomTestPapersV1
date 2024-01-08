@@ -7,13 +7,13 @@
 #' @return The percentage of marks above the specified percentage
 #' @export
 
-get_percentage <- function(marks = numeric(), percentage = integer(), max_mark = numeric()){
+get_percentage <- function(marks, percentage, max_mark){
   UseMethod("get_percentage")
 }
 
 #'@export
 
-get_percentage.default <- function(marks = numeric(), percentage = integer(), max_mark = numeric())
+get_percentage.default <- function(marks, percentage, max_mark)
   {
     per_mark <- percentage*max_mark/100
     count <- length(marks[marks>=per_mark])

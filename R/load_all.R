@@ -25,11 +25,12 @@ load_all_tests.default <- function()
         all_ts[[i]] <- c(name,qs)
       }
     }
-    all_ts <- all_ts
   }
   else{
     all_ts <- NULL
   }
+
+  return(all_ts)
 }
 
 #' Will load all the questions currently saved in 'questions.csv'
@@ -53,6 +54,7 @@ load_all_questions.default <- function()
   {
     all_questions <- NULL
   }
+  return(all_questions)
 }
 
 

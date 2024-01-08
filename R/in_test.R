@@ -6,16 +6,16 @@
 #' @return A list of the names of tests that the question is contained in
 #' @export
 
-in_test <-function(x = character(),all_tests = list()){
+in_test <-function(x, all_tests){
   UseMethod('in_test')
 }
 
 #'@export
 
-in_test.default <-function(x = character(),all_tests = list()){
+in_test.default <-function(x=, all_tests){
   t <- c()
   if(length(all_tests) == 0){
-    t<-t
+    return(t)
   }else{
     for(j in x){
       for(i in 1:length(all_tests)){
@@ -25,6 +25,6 @@ in_test.default <-function(x = character(),all_tests = list()){
         }
       }
     }
-    t<-t
+    return(t)
   }
 }

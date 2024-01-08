@@ -6,13 +6,13 @@
 #' @return A student with updated marks reflecting the results of answering the test
 #' @export
 
-take_test <- function(s = student(), t = test()){
+take_test <- function(s, t){
   UseMethod("take_test")
 }
 
 #'@export
 
-take_test.default<-function(s = student(), t = test()){
+take_test.default<-function(s, t){
   #Gets the given student to answer each question in a test in turn
   for (i in t$questions)
   {
@@ -21,5 +21,5 @@ take_test.default<-function(s = student(), t = test()){
   if (s$total_marks < 0 && t$min_marks == FALSE){
     s$total_marks <- 0
   }
-  s <- s
+  return(s)
 }

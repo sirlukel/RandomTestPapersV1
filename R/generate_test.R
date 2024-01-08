@@ -7,13 +7,13 @@
 #' @return A new test containing the listed questions
 #' @export
 
-generate_test <- function(all_qs = data.frame(), qs = character(), can_neg = logical()){
+generate_test <- function(all_qs, qs, can_neg){
   UseMethod('generate_test')
 }
 
 #'@export
 
-generate_test.default <- function(all_qs = data.frame(), qs = character(), can_neg = logical()){
+generate_test.default <- function(all_qs, qs,){
   x <- list()
   no <- c()
   for (i in 2:length(qs)){

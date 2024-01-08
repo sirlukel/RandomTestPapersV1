@@ -12,7 +12,7 @@ delete <- function(x, removefrom){
 
 #'@export
 
-delete.character <- function(x = character(), removefrom){
+delete.character <- function(x, removefrom){
   if(is.data.frame(removefrom)){
     for(i in x){
       removefrom <- removefrom[!(removefrom$name == i),]
@@ -26,4 +26,5 @@ delete.character <- function(x = character(), removefrom){
     }
     removefrom <- removefrom
   }
+  return(removefrom)
 }

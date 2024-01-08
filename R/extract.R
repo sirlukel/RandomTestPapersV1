@@ -6,14 +6,14 @@
 #' @return The question with the given name if such a question exists
 #' @export
 
-extract_question <- function(name = character(), all_qs = data.frame())
+extract_question <- function(name, all_qs)
 {
   UseMethod("extract_question")
 }
 
 #'@export
 
-extract_question.default <- function(name = character(), all_qs = data.frame())
+extract_question.default <- function(name, all_qs)
 {
   temp = all_qs[all_qs$name == name, ]
   correct <-c()
@@ -26,7 +26,8 @@ extract_question.default <- function(name = character(), all_qs = data.frame())
   }
   if(question$partial_score == TRUE){question$correct_score <- as.numeric(question$correct_score) * length(correct)}
   question <- new_question(name = question$name, option_num = question$option_num,correct_score = question$correct_score,wrong_loss = question$wrong_loss, partial_score = question$partial_score, given_no_correct = question$given_no_correct, correct = correct)
-}
+  return(question)
+  }
 
 #' Will return a test object given the name of the test and a list of all tests and all questions
 #'
@@ -37,13 +38,13 @@ extract_question.default <- function(name = character(), all_qs = data.frame())
 #' @return The test with the given name if it exists
 #' @export
 
-extract_test <- function(name = character, all_ts = list(), all_qs = data.frame()){
+extract_test <- function(name, all_ts, all_qs){
   UseMethod('extract_test')
 }
 
 #'@export
 
-extract_test.default <- function(name = character(), all_ts = list(), all_qs = data.frame()){
+extract_test.default <- function(name, all_ts, all_qs){
   x<-NULL
   for(i in 1:length(all_ts))
   {
@@ -64,5 +65,5 @@ extract_test.default <- function(name = character(), all_ts = list(), all_qs = d
     }
     t <- new_test(q, name = y[1], can_neg = F)
   }
-  t<-t
+  return(t)
 }

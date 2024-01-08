@@ -6,19 +6,19 @@
 #' @export
 #'
 #' @examples
-get_question_names <- function(t = test())
+get_question_names <- function(t)
 {
   UseMethod('get_question_names')
 }
 
 #'@export
 
-get_question_names.default <- function(t = test())
+get_question_names.default <- function(t)
 {
   question_names <- c()
   for(i in t$questions)
   {
     question_names <- c(question_names, i$name)
   }
-  question_names<-question_names
+  return(question_names)
 }

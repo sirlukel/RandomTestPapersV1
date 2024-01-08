@@ -7,7 +7,7 @@
 #' @return A new Test class object
 #' @export
 
-new_test <- function(questions = list(), name = chr(), can_neg = logical()){
+new_test <- function(questions, name, can_neg){
   max_marks <-0
   min_marks <-0
   #Will calculate the maximum and minimum marks for a created test

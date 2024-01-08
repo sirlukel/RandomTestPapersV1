@@ -85,5 +85,5 @@ save_item.list <- function(x){
 
 save_item.default <- function(x)
 {
-  print("Tried to save null item")
+  print("Tried to save invalid item")
 }

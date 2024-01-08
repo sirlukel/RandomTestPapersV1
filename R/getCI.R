@@ -1,13 +1,13 @@
 #' @export
 
-getPerCI <- function(marks = numeric(), percentage = integer, max_mark = numeric())
+getPerCI <- function(marks, percentage, max_mark)
 {
   UseMethod("getPerCI")
 }
 
 #'@export
 
-getPerCI.default <- function(marks = numeric(), percentage = integer, max_mark = numeric())
+getPerCI.default <- function(marks, percentage, max_mark)
 {
   per_mark <- percentage*max_mark/100
   count <- length(marks[marks>=per_mark])
@@ -18,14 +18,14 @@ getPerCI.default <- function(marks = numeric(), percentage = integer, max_mark =
 
 #'@export
 
-getAvCI <- function(marks = numeric())
+getAvCI <- function(marks)
 {
   UseMethod("getAvCI")
 }
 
 #'@export
 
-getAvCI.default <- function(marks = numeric())
+getAvCI.default <- function(marks)
 {
   return(c(mean(marks)- 1.96*sd(marks)/sqrt(length(marks)), mean(marks) + 1.96*sd(marks)/sqrt(length(marks))))
 }

@@ -14,7 +14,7 @@ add_to_all <- function(x, addto)
 #This could be source of new questions being read as string
 #'@export
 
-add_to_all.question <- function(x = question(), addto = data.frame())
+add_to_all.question <- function(x, addto)
 {
   nullcheck <-FALSE
   if(is.null(addto)){
@@ -37,7 +37,7 @@ add_to_all.question <- function(x = question(), addto = data.frame())
     {
       names(addto) <- c('name', 'option_num', 'correct_score', 'wrong_loss', 'partial_score', 'given_no_correct', 'correct')
     }
-    addto<-addto
+    return(addto)
   }
 }
 
@@ -49,13 +49,13 @@ add_to_all.question <- function(x = question(), addto = data.frame())
 #' @return The list of tests containing the new test
 #' @export
 
-add_to_all_test <- function( x= character(), addto){
+add_to_all_test <- function(x, addto){
   UseMethod('add_to_all_test')
 }
 
 #'@export
 
-add_to_all_test.default <- function(x= character(), addto){
+add_to_all_test.default <- function(x, addto){
   addto[[length(addto)+1]] <- x
-  addto<-addto
+  return(addto)
 }
