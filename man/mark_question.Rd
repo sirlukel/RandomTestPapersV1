@@ -4,7 +4,7 @@
 \alias{mark_question}
 \title{Mark a question that a student has answered}
 \usage{
-mark_question(s = student(), q = question())
+mark_question(s, q)
 }
 \arguments{
 \item{s}{A student that has an answer to the question given}

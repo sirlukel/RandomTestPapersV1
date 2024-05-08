@@ -5,16 +5,18 @@
 \title{Creates a new object with class question}
 \usage{
 new_question(
-  name = character(),
-  option_num = integer(),
-  correct_score = numeric(),
-  wrong_loss = numeric(),
-  partial_score = logical(),
-  given_no_correct = logical(),
-  correct = list()
+  name,
+  option_num,
+  correct_score,
+  wrong_loss,
+  partial_score,
+  given_no_correct,
+  correct
 )
 }
 \arguments{
+\item{name}{a string to name the question to make it easily identifiable in a test}
+
 \item{option_num}{an integer representing the number of options the question has}
 
 \item{correct_score}{a numeric value representing how many marks you are awarded for answering the question correctly}

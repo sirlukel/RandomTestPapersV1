@@ -6,6 +6,7 @@
 #'@param partial_score a logical value stating if a student should be awarded a portion of the marks for choosing some correct choices, but no incorrect choices
 #'@param given_no_correct a logical value stating if the student is told how many answers to the question are correct
 #'@param correct a list of integers giving the number of each correct answer. There should be no repeated numbers and no number higher than option_num
+#'@param name a string to name the question to make it easily identifiable in a test
 #'
 #'@return A question type object
 #'@export
