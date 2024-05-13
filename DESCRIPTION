@@ -1,10 +1,10 @@
-Package: randomtestpapers
-Title: What the Package Does (One Line, Title Case)
+Package: randomtestpapersV1
+Title: RandomTestPapersV1
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Luke", "Brooke", , "brookeluk@btinternet.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Used to estimate the distribution of scores achieved on a test through random guessing.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
